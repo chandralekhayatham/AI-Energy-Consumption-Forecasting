@@ -1,0 +1,24 @@
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+.pytest_cache/
+
+# Generated or local datasets
+data/*.csv
+
+# Trained models
+models/*.joblib
+models/*.keras
+models/*.h5
+
+# Generated outputs
+outputs/*.png
+outputs/*.json
+outputs/*.csv
+
+# Keep these folders in Git
+!data/.gitkeep
+!models/.gitkeep
+!outputs/.gitkeep

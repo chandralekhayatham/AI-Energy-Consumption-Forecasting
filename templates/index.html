@@ -1,0 +1,6 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Energy Forecasting</title>
+<style>body{font-family:Arial;background:#f3f6fb;color:#172033;margin:0}main{max-width:760px;margin:55px auto;padding:28px;background:white;border-radius:16px;box-shadow:0 8px 28px #0001}h1{color:#176b55}button{background:#176b55;color:white;border:0;border-radius:8px;padding:12px 18px;cursor:pointer}.result{margin-top:20px;padding:18px;background:#eaf7f0;border-radius:10px}.metric{font-size:28px;font-weight:bold}small{color:#5d6677;line-height:1.6}</style></head>
+<body><main><h1>⚡ Energy Consumption Forecasting</h1><p>Forecast the next hour's electricity consumption using an MLP regression model and recent historical usage.</p>
+<form method="post"><button>Forecast Next Hour</button></form>
+{% if result %}<div class="result"><p>Forecast for: <b>{{result.forecast_for}}</b></p><div class="metric">{{result.predicted_consumption_kwh}} kWh</div></div>{% endif %}
+{% if error %}<p>{{error}}</p>{% endif %}<hr><small>Educational prototype. If no CSV is supplied, simulated data is generated. Do not use for real grid operations.</small></main></body></html>
